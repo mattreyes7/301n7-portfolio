@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name=“viewport” content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="starter-code/vendor/styles/reset.css"> -->
+  <link rel="stylesheet" href="starter-code/vendor/styles/normalize.css">
   <link rel="stylesheet" href="starter-code/styles/icons.css">
   <link rel="stylesheet" href="starter-code/styles/base.css">
   <link rel="stylesheet" href="starter-code/styles/layout.css">
-  <link rel="stylesheet" href="starter-code/styles/modules.css">
-  <!-- <link rel="stylesheet" href="starter-code/vendor/styles/reset.css"> -->
+  <link rel="stylesheet" href="starter-code/styles/module.css">
   <link rel="icon" type="image/x-icon" href="assets/mattlogo.png">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>Matt Reyes Portfolio</title>
+  <script id="project-template" type="text/x-handlebars-template">
+      <article class="project-container" data-category="{{projCategory}}">
+        <header>
+          <h1>{{projTitle}}</h1>
+          <div class="image-container">{{projImage}}</div>
+        </header>
+        <section class="project-summary">{{{projSummary}}}</section>
+      </article>
+    </script>
 </head>
 <body>
   <header class="heading-group">
@@ -24,8 +34,11 @@
     </ul>
   </nav>
   </header>
-  <h1>Hi I'm Matt.</h1>
-
-
+<main>
+  <h1>Hi I'm Matt. Welcome to my portfolio.</h1>
+</main>
+<script src ="starter-code/scripts/jquery-3.2.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+<script src="starter-code/scripts/app.js"></script>
 </body>
 </html>
