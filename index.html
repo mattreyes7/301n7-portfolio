@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>Matt Reyes Portfolio</title>
   <script id="project-template" type="text/x-handlebars-template">
+    {{#each projects}}
       <article class="project-container" data-category="{{projCategory}}">
         <header>
           <h1>{{projTitle}}</h1>
@@ -20,6 +21,7 @@
         </header>
         <section class="project-summary">{{{projSummary}}}</section>
       </article>
+      {{/each}}
     </script>
 </head>
 <body>
@@ -40,8 +42,8 @@
 
   </section>
 </main>
-<script src ="starter-code/scripts/jquery-3.2.0.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.5.js"></script>
 <script src="starter-code/scripts/projects.js"></script>
 <script src="starter-code/scripts/app.js"></script>
 </body>

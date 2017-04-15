@@ -1,21 +1,10 @@
 'use strict';
 
-var projects = [];
+var projectSource = $('#project-template').html();
+var handleBarsTemplate = Handlebars.compile(projectSource);
 
-function Project (rawDataObj) {
-  this.projCategory = rawDataObj.projCategory;
-  this.projTitle = rawDataObj.projTitle;
-  this.projSrc = rawDataObj.projSrc;
-  this.projSummary = rawDataObj.projSummary;
-}
+// Pass our data to the template
+var theCompiledHtml = handleBarsTemplate(rawData);
 
-Project.prototype.toHtml = function() {
-  var template = Handlebars.compile($('#project-template').text());
-
-  return template(this);
-
-};
-
-projects.forEach(function(project){
-  $('#projects').append(project.toHtml());
-});
+// Add the compiled html to the page
+$('#projects').append(theCompiledHtml);
