@@ -1,18 +1,21 @@
-// project constructor: {
-// title
-// image
-// date published
-// infos
-
 'use strict';
-var sourceHtml = $('#project-template').html();
-var handleBarsTemplate = Handlebars.compile(sourceHtml);
 
-var projects = [
-  {
-    projCategory:'Graphic Design',
-    projTitle:'Federal Way Champs!',
-    projImage:'assets/fdubchamp.jpg',
-    projSummary:'<p>A t-shirt design for the 2015 High school basketball state champions.</p>'
-  },
-]
+var projects = [];
+
+function Project (rawDataObj) {
+  this.projCategory = rawDataObj.projCategory;
+  this.projTitle = rawDataObj.projTitle;
+  this.projSrc = rawDataObj.projSrc;
+  this.projSummary = rawDataObj.projSummary;
+}
+
+Project.prototype.toHtml = function() {
+  var template = Handlebars.compile($('#project-template').text());
+
+  return template(this);
+
+};
+
+projects.forEach(function(project){
+  $('#projects').append(project.toHtml());
+});
