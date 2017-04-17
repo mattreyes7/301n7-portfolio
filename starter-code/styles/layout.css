@@ -13,6 +13,17 @@ h1   {
   text-align: center;
 }
 
-img {
+.project-container {
+  display: flex;
   align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.project-summary {
+  padding: 5em;
+}
+.image-container {
+  border: solid black;
+  border-radius: 10px;
 }

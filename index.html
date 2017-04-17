@@ -16,10 +16,9 @@
     {{#each projects}}
       <article class="project-container" data-category="{{projCategory}}">
         <header>
-          <h1>{{projTitle}}</h1>
-          <img src="{{projSrc}}" class="image-container">
+          <a href="{{projUrl}}"><img src="{{projSrc}}" class="image-container"></a>
         </header>
-        <section class="project-summary">{{{projSummary}}}</section>
+        <div class="project-summary"><h1>{{projTitle}}</h1>{{{projSummary}}}</div>
       </article>
       {{/each}}
     </script>
