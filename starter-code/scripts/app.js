@@ -8,3 +8,5 @@ var theCompiledHtml = handleBarsTemplate(rawData);
 
 // Add the compiled html to the page
 $('#projects').append(theCompiledHtml);
+
+//local storage below
