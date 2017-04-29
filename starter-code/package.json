@@ -1,0 +1,19 @@
+{
+  "name": "301n7-portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio as a web designer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattreyes7/301n7-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattreyes7/301n7-portfolio/issues"
+  },
+  "homepage": "https://github.com/mattreyes7/301n7-portfolio#readme"
+}
