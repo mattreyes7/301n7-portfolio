@@ -4,22 +4,21 @@
   <meta charset="utf-8">
   <meta name=“viewport” content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="starter-code/vendor/styles/reset.css"> -->
-  <link rel="stylesheet" href="starter-code/vendor/styles/normalize.css">
-  <link rel="stylesheet" href="starter-code/styles/icons.css">
-  <link rel="stylesheet" href="starter-code/styles/base.css">
-  <link rel="stylesheet" href="starter-code/styles/layout.css">
-  <link rel="stylesheet" href="starter-code/styles/module.css">
-  <link rel="icon" type="image/x-icon" href="assets/mattlogo.png">
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/module.css">
+  <link rel="icon" type="image/x-icon" href="assets/matticon.png">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>Matt Reyes Portfolio</title>
   <script id="project-template" type="text/x-handlebars-template">
     {{#each projects}}
       <article class="project-container" data-category="{{projCategory}}">
         <header>
-          <h1>{{projTitle}}</h1>
-          <img src="{{projSrc}}" class="image-container">
+          <a href="{{projUrl}}"><img src="{{projSrc}}" class="image-container"></a>
         </header>
-        <section class="project-summary">{{{projSummary}}}</section>
+        <div class="project-summary"><h1>{{projTitle}}</h1>{{{projSummary}}}</div>
       </article>
       {{/each}}
     </script>
@@ -39,12 +38,12 @@
 <main>
   <h1>Hi I'm Matt. Welcome to my portfolio.</h1>
   <section id="projects">
-
   </section>
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="scripts/jquery-3.2.0.js"></script>
 <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.5.js"></script>
-<script src="starter-code/scripts/projects.js"></script>
-<script src="starter-code/scripts/app.js"></script>
+<script src="scripts//projects.js"></script>
+<script src="scripts//app.js"></script>
+<script>Project.fetchAll();</script>
 </body>
 </html>

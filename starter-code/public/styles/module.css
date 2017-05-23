@@ -39,7 +39,7 @@
 
   .main-nav ul {
     display: block;
-    align-items: baseline;
+    /*align-items: baseline;*/
   }
 
   .main-nav ul li {
