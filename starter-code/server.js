@@ -1,15 +1,25 @@
 'use strict';
 
-const express = require('express')
+const fs = require('fs');
+const express = require('express');
+const pg = require('pg');
+const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 3000;
 const app = express()
 
-const PORT = process.env.PORT || 3000;
+const conString = "postgres://matthewaaronreyes@localhost:5432/portfolio";
 
-app.use(express.static(__dirname + '/public'))
-app.get('*', function(req, res) {
-  res.sendFile(__dirname + '/index.html')
-});
+const client = new pg.Client(conString);
+client.connect();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('./'));
 
 app.listen(PORT, function() {
-  console.log(PORT);
+  console.log('server started on '+PORT);
+});
+
+app.get('/new', function(request, response) {
+  response.sendFile('index.html', {root: './public'});
 });
