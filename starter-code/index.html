@@ -5,6 +5,7 @@
   <meta name=“viewport” content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="starter-code/vendor/styles/reset.css"> -->
   <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="animate.min.css">
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
@@ -25,7 +26,7 @@
 </head>
 <body>
   <header class="heading-group">
-    <img src="assets/mattlogo.png" class="header-logo">
+    <img src="assets/mattlogo.png" class="header-logo animated bounce">
     <nav class="main-nav">
       <div class="icon-menu"></div>
     <ul>
@@ -37,13 +38,24 @@
   </header>
 <main>
   <h1>Hi I'm Matt. Welcome to my portfolio.</h1>
+  <section id="about" class="tab-content">
+          <h1>Some of my intrests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Learning about new tech</li>
+            <li>Hanging with my family and friends</li>
+            <li>Playing video games</li>
+          </ul>
+        </section>
   <section id="projects">
   </section>
 </main>
 <script src="scripts/jquery-3.2.0.js"></script>
 <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.5.js"></script>
-<script src="scripts//projects.js"></script>
-<script src="scripts//app.js"></script>
+<script src="scripts/projects.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/projectController.js"></script>
+<script src="scripts/controllers/aboutController.js"></script>
 <script>Project.fetchAll();</script>
 </body>
 </html>
